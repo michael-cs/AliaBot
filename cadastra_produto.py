@@ -15,7 +15,7 @@ class Cadastro():
         Tasks.AbrePainelAlia(url_alia)
         Tasks.EfetuaLogin(login_email, login_password)
 
-        for row in data_frame.iterrows():
+        for index, row in data_frame.iterrows():
             barcode_produto = row["Código de Barras"]
             titulo_produto = row["Título"]
             nome_produto = row["Nome"]
