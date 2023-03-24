@@ -8,7 +8,7 @@ from selenium.webdriver.common.keys import Keys
 # from selenium.webdriver.support import expected_conditions as EC
 
 import os
-import time
+# import time
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.maximize_window()
@@ -17,7 +17,6 @@ driver.maximize_window()
 class Tasks():
     def __init__(self, url, email, password, barcode, titulo, nome, marca,
                  peso, empresa, descricao):
-        self.driver = driver
         self.url = url
         self.email = email
         self.password = password
@@ -30,8 +29,8 @@ class Tasks():
         self.descricao = descricao
 
     def AbrePainelAlia(url):
-        driver.get(url)
         driver.implicitly_wait(10)
+        driver.get(url)
 
     def EfetuaLogin(email, password):
         email_field = driver.find_element(
@@ -43,20 +42,21 @@ class Tasks():
         login_button = driver.find_element(
             By.CSS_SELECTOR, "button[type='submit']")
 
+        driver.implicitly_wait(10)
+
         email_field.send_keys(email)
         password_field.send_keys(password)
         login_button.click()
-        driver.implicitly_wait(10)
 
     @staticmethod
     def AbreCadastroDeProdutos():
+        driver.implicitly_wait(10)
         produtos_button = driver.find_element(
             By.XPATH, "//p[normalize-space()='Produtos']")
         produtos_button.click()
         adicionar_button = driver.find_element(
             By.XPATH, "//a[@class='btn btn-sm btn-primary']")
         adicionar_button.click()
-        time.sleep(1)
 
     @staticmethod
     def InsereImagem():
@@ -70,22 +70,16 @@ class Tasks():
 
         codigo_de_barras_campo = driver.find_element(
             By.XPATH, "//input[@id='input-barcode']")
-        time.sleep(1)
         titulo_campo = driver.find_element(
             By.XPATH, "//input[@id='input-title']")
-
         nome_produto_campo = driver.find_element(
             By.ID, 'input-name')
-        time.sleep(1)
         marca_do_produto_campo = driver.find_element(
             By.XPATH, "//input[@id='input-brand']")
-
         peso_produto_campo = driver.find_element(
             By.XPATH, "//input[@id='input-weight']")
-
         empresa_campo = Select(driver.find_element(
             By.ID, "input-company"))
-
         cadastrar_button = driver.find_element(
             By.XPATH, "//button[@type='submit']")
         text_area = driver.find_element(
@@ -111,5 +105,4 @@ class Tasks():
 
     @staticmethod
     def CloseBrowser():
-        time.sleep(3)
         driver.quit
