@@ -1,19 +1,17 @@
 import pandas as pd
-from automations import Tasks
-
-
-arquivo = "produtos.xlsx"
-data_frame = pd.read_excel(arquivo)
-url_alia = "https://painel.aliainclui.com.br/login"
-login_email = "michaelcristianodesouza@gmail.com"
-login_password = "Strike09@"
+from tasks import Tasks
 
 
 class Cadastro():
 
-    def CadastraProdutos(data_frame):
+    @staticmethod
+    def CadastraProdutos(email, password, file):
+        url_alia = "https://painel.aliainclui.com.br/login"
+        arquivo = file
+        data_frame = pd.read_excel(arquivo)
+
         Tasks.AbrePainelAlia(url_alia)
-        Tasks.EfetuaLogin(login_email, login_password)
+        Tasks.EfetuaLogin(email, password)
 
         for index, row in data_frame.iterrows():
             barcode_produto = row["Código de Barras"]
@@ -34,6 +32,3 @@ class Cadastro():
                                  empresa_produto,
                                  descricao_produto)
         Tasks.CloseBrowser()
-
-
-Cadastro.CadastraProdutos(data_frame)

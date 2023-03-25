@@ -4,30 +4,15 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
-# from selenium.webdriver.support.wait import WebDriverWait
-# from selenium.webdriver.support import expected_conditions as EC
-
 import os
-# import time
 
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+
+driver = webdriver.Chrome(service=Service(ChromeDriverManager(
+                  ).install()))
 driver.maximize_window()
 
 
 class Tasks():
-    def __init__(self, url, email, password, barcode, titulo, nome, marca,
-                 peso, empresa, descricao):
-        self.url = url
-        self.email = email
-        self.password = password
-        self.barcode = barcode
-        self.titulo = titulo
-        self.nome = nome
-        self.marca = marca
-        self.peso = peso
-        self.empresa = empresa
-        self.descricao = descricao
-
     def AbrePainelAlia(url):
         driver.implicitly_wait(10)
         driver.get(url)
@@ -51,6 +36,7 @@ class Tasks():
     @staticmethod
     def AbreCadastroDeProdutos():
         driver.implicitly_wait(10)
+
         produtos_button = driver.find_element(
             By.XPATH, "//p[normalize-space()='Produtos']")
         produtos_button.click()
@@ -61,6 +47,7 @@ class Tasks():
     @staticmethod
     def InsereImagem():
         driver.implicitly_wait(10)
+
         adicionarimagem_button = driver.find_element(
             By.XPATH, "//input[@name='medias[]']")
         path = os.path.abspath('./logoAlia.jpg')

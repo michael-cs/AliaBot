@@ -10418,3 +10418,5 @@ venv/Lib/site-packages/Pillow-9.4.0.dist-info/REQUESTED
 venv/Lib/site-packages/Pillow-9.4.0.dist-info/top_level.txt
 venv/Lib/site-packages/Pillow-9.4.0.dist-info/WHEEL
 venv/Lib/site-packages/Pillow-9.4.0.dist-info/zip-safe
+__pycache__/app.cpython-311.pyc
+__pycache__/cadastra_produto.cpython-311.pyc
