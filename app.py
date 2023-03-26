@@ -33,43 +33,42 @@ class App():
                                  text=None)
         label_img.place(x=180, y=15)
 
-        email_field = ctk.CTkEntry(master=frame,
-                                   width=340,
-                                   placeholder_text=(
-                                    "Email de acesso ao painel Alia"),
-                                   font=("Arial", 14),
-                                   corner_radius=10
-                                   )
-        email_field.place(x=75, y=140)
+        self.email_field = ctk.CTkEntry(master=frame,
+                                        width=340,
+                                        placeholder_text=(
+                                         "Email de acesso ao painel Alia"),
+                                        font=("Arial", 14),
+                                        corner_radius=10)
+        self.email_field.place(x=75, y=140)
         self.email_label = ctk.CTkLabel(master=frame,
                                         text="*campo obrigatório",
                                         text_color="white",
                                         font=("Arial", 12),
                                         ).place(x=75, y=168)
 
-        password_field = ctk.CTkEntry(master=frame,
-                                      show="*",
-                                      width=340,
-                                      placeholder_text=(
-                                       "Senha de accesso ao painel Alia"),
-                                      font=("Arial", 14),
-                                      corner_radius=10
-                                      )
-        password_field.place(x=75, y=200,)
+        self.password_field = ctk.CTkEntry(master=frame,
+                                           show="*",
+                                           width=340,
+                                           placeholder_text=(
+                                            "Senha de accesso ao painel Alia"),
+                                           font=("Arial", 14),
+                                           corner_radius=10
+                                           )
+        self.password_field.place(x=75, y=200,)
         self.password_label = ctk.CTkLabel(master=frame,
                                            text="*campo obrigatório",
                                            text_color="white",
-                                           font=("Arial", 12),
+                                           font=("Arial", 12)
                                            ).place(x=75, y=228)
 
-        filename_field = ctk.CTkEntry(master=frame,
-                                      width=340,
-                                      placeholder_text=(
-                                       "Informe a planilha com os dados"),
-                                      font=("Arial", 14),
-                                      corner_radius=10
-                                      )
-        filename_field.place(x=75, y=260)
+        self.filename_field = ctk.CTkEntry(master=frame,
+                                           width=340,
+                                           placeholder_text=(
+                                            "Informe a planilha com os dados"),
+                                           font=("Arial", 14),
+                                           corner_radius=10
+                                           )
+        self.filename_field.place(x=75, y=260)
         self.filename_label = ctk.CTkLabel(master=frame,
                                            text=(
                                             '*Ex: "planilha.xlsx"(sem aspas)'),
@@ -87,10 +86,10 @@ class App():
                                     font=("Arial", 16, 'bold'),
                                     fg_color="white",
                                     text_color="#E63946",
-                                    command=lambda: Cadastro.CadastraProdutos(
-                                        email_field.get(),
-                                        password_field.get(),
-                                        filename_field.get())
+                                    command=(lambda: Cadastro.CadastraProdutos(
+                                        self.email_field.get(),
+                                        self.password_field.get(),
+                                        self.filename_field.get()))
                                     ).place(x=165, y=390)
 
 

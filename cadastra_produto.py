@@ -7,8 +7,7 @@ class Cadastro():
     @staticmethod
     def CadastraProdutos(email, password, file):
         url_alia = "https://painel.aliainclui.com.br/login"
-        arquivo = file
-        data_frame = pd.read_excel(arquivo)
+        data_frame = pd.read_excel(file)
 
         Tasks.AbrePainelAlia(url_alia)
         Tasks.EfetuaLogin(email, password)
