@@ -9,7 +9,7 @@
 
 :small_blue_diamond: [Funcionalidades](#funcionalidades)
 
-:small_blue_diamond: [Deploy da Aplicação](#deploy-da-aplicação)
+:small_blue_diamond: [Download da Aplicação](#download-da-aplicação)
 
 :small_blue_diamond: [Linguagens e libs utilizadas](#linguagens-e-libs-utilizadas)
 
@@ -43,7 +43,7 @@ TODO:Criação de lógica de cadastramento de seções, sendo esta uma aba opcio
 a empresa aliada pode disponibilizar ao usuário final informações extras e segmentadas de forma a facilitar a leitura com assistentes de acessibilidade dos smartphones
 através de gestos de varredura, podendo ir diretamente a seção desejada sem ter de ouvir toda a descrição do produto.
 
-## Deploy da Aplicação
+## Download da Aplicação
 
 :bulb: Link do deploy da aplicação(pasta zipada, contendo nesta, o arquivo executável "AliaBot.exe"): 
 https://drive.google.com/file/d/bc1qzk3kxhdxnzkpdgdn9ueg34y08smxgfv0hxvcu3-wu5z5E/view?usp=share_link
