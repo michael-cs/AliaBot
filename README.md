@@ -17,7 +17,7 @@
 
 ## Descrição do projeto
 
-Projeto de RPA em Python para acesso ao painel da empresa Alia Inclui(https://painel.aliainclui.com.br/login), com o objetivo de cadastrar os produtos conforme planilha padronizada pela empresa. 
+Projeto de RPA em Python para acesso ao painel da empresa Alia Inclui (https://painel.aliainclui.com.br/login), com o objetivo de cadastrar os produtos conforme planilha padronizada pela empresa. 
 Com isto,as empresas aliadas que contratarem os serviços de acessibilidade de rótulo da Alia, poderão enviar a planilha preenchida e sua base de produtos será cadastrada sem a 
 necessidade de manter um colaborador efetuando a tarefa de inserção dos dados um a um. Evita-se assim o uso de mão de obra técnica para a tarefa e minimiza-se o fator 
 de erro humano nos cadastros.
