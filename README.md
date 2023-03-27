@@ -58,7 +58,7 @@ https://drive.google.com/file/d/bc1qzk3kxhdxnzkpdgdn9ueg34y08smxgfv0hxvcu3-wu5z5
 
 ## Como rodar a aplicação
 
-Baixe a pasta zipada (link no ítem "Deploy da Aplicação), e após descompacta-la, execute o arquivo "AliaBot.exe". O programa irá abrir o navegador Chrome em plano de fundo
+Baixe a pasta zipada (link no ítem "Download da Aplicação), e após descompacta-la, execute o arquivo "AliaBot.exe". O programa irá abrir o navegador Chrome em plano de fundo
 e a GUI abaixo estará disponível:
 
 ![gui](https://user-images.githubusercontent.com/103940775/227797709-f30a0eaf-b9ee-48ce-80c6-fb49f5035247.JPG)
