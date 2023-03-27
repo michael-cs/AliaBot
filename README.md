@@ -1,5 +1,6 @@
+![logoAliaBot](https://user-images.githubusercontent.com/103940775/227815676-dbb162a0-87c1-4e22-9bb5-f6bbb25fcdcc.jpg)
 
-![logotipo da Alia Inclui, quadrado vermelho com logomarca em traço branco slido e nome alia inclui abaixo da logo](https://user-images.githubusercontent.com/103940775/227793904-bea24e20-c27c-4e98-a13b-96b47056e541.jpg)
+
 # Alia Bot
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
